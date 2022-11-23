@@ -1,0 +1,508 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --main-color: #3a6cf4;
+}
+* {
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 200px;
+  background-color: #f0f0f0;
+  align-items: center;
+  z-index: 99;
+  width: 100%;
+  position: fixed;
+}
+
+header .logo {
+  font-size: 1.8em;
+  font-weight: 700;
+  color: var(--main-color);
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.navigation a {
+  color: var(--main-color);
+  text-decoration: none;
+  padding-left: 30px;
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.navigation a:hover {
+  color: #601cfc;
+}
+
+.up {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  background-color: var(--main-color);
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  height: 30px;
+  width: 30px;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.5s;
+  display: block;
+  padding: 2px;
+  scroll-behavior: smooth;
+  z-index: 99;
+}
+.up:hover {
+  background-color: #104fff;
+}
+
+section {
+  padding: 100px 200px;
+}
+.main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url(/imgs/1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: black;
+}
+
+.main .name {
+  color: #fff;
+  font-size: 1.6em;
+  font-weight: 500px;
+  border-right: 2px solid #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: control-width steps(22) 2s 2s both, blink 2s 0.5s infinite;
+}
+
+@keyframes control-width {
+  from {
+    width: 0;
+  }
+  to {
+    width: 313px;
+  }
+}
+
+@keyframes blink {
+  from {
+    border-right-color: #fff;
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+.main span {
+  color: #4e9eff;
+  font-size: 2em;
+  font-weight: 600px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.main h3 {
+  color: #fff;
+  font-size: 1.4em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 10px 0 30px;
+}
+.main .main-btn {
+  color: #fff;
+  background-color: var(--main-color);
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-bottom: 40px;
+  font-size: 1.1em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: 0.5s ease;
+}
+
+.main .main-btn:hover {
+  background-color: #104fff;
+  transform: scale(1.1);
+}
+
+.social-icons a {
+  font-size: 1.7em;
+  color: #fff;
+  padding-right: 20px;
+}
+
+section .title {
+  display: flex;
+  justify-content: center;
+  color: var(--main-color);
+  font-size: 2.2em;
+  font-weight: 800;
+
+  margin-bottom: 30px;
+}
+.cards .content {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.cards .content .card {
+  background-color: #fff;
+  width: 260px;
+  box-shadow: 0 5px 25px rgba(1, 1, 1, 15%);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  transition: 0.5s ease;
+  text-align: center;
+}
+
+.cards .content .card:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.cards .content .card .icon {
+  font-size: 8em;
+  color: var(--main-color);
+}
+.cards .content .card .info h3 {
+  color: var(--main-color);
+  font-size: 1.2em;
+  font-weight: 700;
+  margin: 10px;
+}
+
+.projects {
+  background-color: #000016;
+}
+.projects .content {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.projects .content .project-card {
+  background-color: #fff;
+  border: 1px solid #fff;
+  min-height: 14em;
+  width: 15em;
+  overflow: hidden;
+  margin: 20px;
+  transition: 0.5s ease;
+  border-radius: 8px;
+}
+
+.projects .content .project-card:hover {
+  transform: scale(1.1);
+}
+
+.project-card:hover .project-img {
+  opacity: 0.9;
+}
+
+.project-img img {
+  max-width: 100%;
+  height: 100%;
+}
+
+.project-info {
+  padding: 15px;
+}
+
+.project-category {
+  font-size: 14px;
+  color: #000;
+}
+.project-title {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+.more-details {
+  text-decoration: none;
+  color: var(--main-color);
+}
+.more-details:hover {
+  color: #601cfc;
+}
+
+.box .info {
+  box-shadow: 0 5px 15px rgb(1 1 1 / 15%);
+}
+.stats .nums {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.stats .nums .info {
+  width: 200px;
+  background-color: rgb(249, 249, 249);
+  padding: 10px;
+  text-align: center;
+  margin: 5px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5px;
+  font-size: 30px;
+  position: relative;
+}
+.stats .nums .box .info::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  box-sizing: border-box;
+  border-left: 1px solid transparent;
+  transition: all 0.9s ease;
+}
+
+.stats .nums .box .info::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  box-sizing: border-box;
+  border-right: 1px solid transparent;
+  transition: all 0.9s ease;
+}
+
+.stats .nums .box:hover .info::after {
+  border-color: #104fff;
+  width: 100%;
+  height: 100%;
+}
+
+.stats .nums .box:hover .info::before {
+  border-color: #104fff;
+  width: 100%;
+  height: 100%;
+}
+
+.stats .nums .box .info:hover {
+  cursor: pointer;
+}
+
+.stats .nums .info span {
+  font-size: 40px;
+}
+
+.stats .nums .box .info p {
+  font-size: 18px;
+  font-style: italic;
+  color: #601cfc;
+}
+
+.stats .nums .num {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.contact .content .card .icon {
+  font-size: 4.5em;
+}
+
+.contact .content .card .info h3 {
+  color: #000;
+}
+
+footer {
+  background-color: #000016;
+  color: #fff;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer p {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+footer span {
+  color: var(--main-color);
+}
+
+footer .social-icons a {
+  font-size: 20px;
+  padding-right: 10px;
+}
+
+@media (max-width: 1023px) {
+  header {
+    padding: 10px 20px;
+  }
+  .navigation a {
+    padding-left: 10px;
+  }
+
+  .main {
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  .main .name {
+    margin: 10px auto;
+  }
+
+  .title {
+    font-size: 1.8em;
+  }
+
+  section {
+    padding: 80px 20px;
+  }
+
+  section .content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .content h2 {
+    font-size: 1em;
+  }
+
+  .content h3 {
+    font-size: 1.6em;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stats .nums .info span {
+    font-size: 36px;
+  }
+
+  .stats .nums .num {
+    font-size: 32px;
+  }
+
+  .stats .nums .box .info p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 732px) {
+  body {
+    font-size: 12px;
+  }
+
+  @keyframes control-width {
+    from {
+      width: 0;
+    }
+    to {
+      width: 240px;
+    }
+  }
+
+  .content h2 {
+    font-size: 0.8em;
+  }
+
+  .content h3 {
+    font-size: 1.4em;
+  }
+
+  .stats .nums .info span {
+    font-size: 34px;
+  }
+
+  .stats .nums .num {
+    font-size: 30px;
+  }
+
+  .stats .nums .box .info p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 10px;
+  }
+
+  @keyframes control-width {
+    from {
+      width: 0;
+    }
+    to {
+      width: 200px;
+    }
+  }
+
+  .projects .content .project-card .project-info .project-title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .projects .content .project-info b {
+    font-size: 1em;
+  }
+
+  footer p {
+    font-size: 10px;
+  }
+
+  footer .social-icons a {
+    font-size: 10px;
+  }
+
+  #numbers {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .stats .nums .info {
+    width: 100%;
+  }
+
+  .stats .nums .info span {
+    font-size: 30px;
+  }
+
+  .stats .nums .num {
+    font-size: 26px;
+  }
+
+  .stats .nums .box .info p {
+    font-size: 14px;
+  }
+}
